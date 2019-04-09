@@ -1319,9 +1319,9 @@ mongoose-legacy-pluralize@1.0.2:
   integrity sha512-Yo/7qQU4/EyIS8YDFSeenIvXxZN+ld7YdV9LqFVQJzTLye8unujAWPZ4NWKfFA+RNjh+wvTWKY9Z3E5XM6ZZiQ==
 
 mongoose@^5.4.21:
-  version "5.4.21"
-  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.4.21.tgz#59c201d48eea168dc2bd1748210998b2099e8e95"
-  integrity sha512-8teQZ/YUXv7+m5GaPDTmyoSJx7tPczZ99vM0/MS8GFCGVn8BKb5jQzuQCP62nBH4vN6Dmf0OiVKTFUkCpkVp+Q==
+  version "5.4.23"
+  resolved "https://registry.yarnpkg.com/mongoose/-/mongoose-5.4.23.tgz#89203165116122f0784cb5b12b77ee639761b13c"
+  integrity sha512-23IfTiA9FRJ7yPBFBobpjw5L1OiXzwyAnslB5SI1uN/2nXdd4vqQuP8w0w2ZcrvQ/KP3Mqs02v6n7tc8KzYNMA==
   dependencies:
     async "2.6.1"
     bson "~1.1.0"

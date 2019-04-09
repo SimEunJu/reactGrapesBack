@@ -1,8 +1,8 @@
-const {Grapes} = require("models/post");
+const Grapes = require("models/post");
 const {ObjectId} = require("mongoose").Types;
 
 exports.checkObjectId = (ctx, next) => {
-    const gno = ctx.params;
+    const gno = ctx.params.gno;
     if(!ObjectId.isValid(gno)){
         ctx.status = 404;
         return null;
@@ -11,16 +11,17 @@ exports.checkObjectId = (ctx, next) => {
 }
 
 exports.createNew = async (ctx) => {
-    const {depth} = ctx.query;
+    let {depth} = ctx.query;
+    depth = parseInt(depth);
     const totalCnt = depth*(depth+1)/2;
     let grape = [];
-    for(let idx=0; i++; i<totalCnt){
+    for(let idx=0; idx<totalCnt; idx++){
         grape.push({idx});
     }
     const grapes = new Grapes({
         depth, 
         grapeCnt: totalCnt,
-        grape: [grape]
+        grape: grape
     });
     try{
         const result = await grapes.save();
@@ -67,7 +68,7 @@ exports.updateRgba = async (ctx) => {
        ctx.throw(e);
    }
 }
-exports.readContainer = async (ctx) => {
+exports.readShowcase = async (ctx) => {
     try{
         const allGrapes = await Grapes.find().exec();
         ctx.body = allGrapes; 

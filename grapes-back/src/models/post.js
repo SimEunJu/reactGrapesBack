@@ -16,6 +16,7 @@ const Grapes = new Schema({
         idx: Number,
         isChecked: {type: Boolean, default: false},
         content: {type:String, default: ""},
+        title: {type:String, default:""}
     }]
 });
 

@@ -93,7 +93,7 @@ exports.updateFinishState = async (ctx) => {
  }
 exports.readShowcase = async (ctx) => {
     try{
-        const allGrapes = await Grapes.find().exec();
+        const allGrapes = await Grapes.find({}, {_id: 1, rgba: 1, title: 1, regdate: 1}).sort({regdate: -1}).exec();
         ctx.body = allGrapes; 
     }catch(e){
         ctx.throw(e);
